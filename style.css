@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-
 }
 
 .main-grid {
@@ -38,6 +37,11 @@ body {
   font-size: 1.8rem;
 }
 
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .sidebar-icon {
   color: white;
   height: 25px;
@@ -54,6 +58,64 @@ body {
   grid-row: 1/2;
   box-shadow: 5px 0px 10px rgb(179, 179, 179);
   z-index: 1;
+  display: grid;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.search {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-content: center;
+  gap: 20px;
+}
+
+.nav-bottom-right, .nav-right-icons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: end;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-right: 50px;
+}
+
+.nav-right-icons {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.nav-bottom-left {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+}
+
+.nav-bottom-right {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.button {
+  color: white;
+  background-color: #0795d6;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.search-bar {
+  background-color: rgb(236, 236, 236);
+  height: 30px;
+  min-width: 500px;
+  border-radius: 25px;
 }
 
 .content {
@@ -68,10 +130,11 @@ body {
   grid-column: 1 / 2;
   grid-row : 1/3;
   padding-left: 20px;
-  padding-top: 30px;
+  padding-top: 10px;
   display: grid;
-  align-content: start;
+  align-content: stretch;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .card-grid {
@@ -114,15 +177,19 @@ body {
   align-self: end;
 }
 
-.content-icon {
+.content-icon, .nav-icon {
   color: rgb(54, 54, 54);
   height: 25px;
   justify-self: center;
 }
 
+.avatar {
+  height: 70px;
+}
+
 .content-top-right, .content-bottom-right {
   display: grid;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-left: 20px;
   padding-right: 40px;
   gap: 10px;
@@ -146,8 +213,12 @@ body {
   font-weight: bold;
 }
 
-.subtitle {
+.subtitle, .hello {
   font-size: 0.9rem;
+}
+
+.hello {
+  font-weight: bold;
 }
 
 .right-card {
@@ -155,7 +226,7 @@ body {
   border-radius: 10px;
   display: grid;
   width: 235px;
-  padding: 30px 20px 20px;
+  padding: 20px 20px 10px;
   gap: 15px;
   box-shadow: 5px 5px 10px rgb(179, 179, 179);
   z-index: 1;
@@ -172,8 +243,9 @@ body {
   grid-template-columns: auto auto;
   align-items: center;
   justify-content: start;
-  gap: 20px;
-  margin-bottom: 50px;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #last-row {
