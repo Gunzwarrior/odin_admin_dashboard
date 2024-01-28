@@ -1,30 +1,107 @@
 body {
   margin: 0;
+  font-family: Roboto, sans-serif;
+
 }
 
 .main-grid {
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 5fr;
 }
 
 .sidebar {
-  background-color: blue;
+  background-color: #0795d6;
   grid-column: 1/2;
   grid-row: 1/3;
+  display: grid;
+  gap: 50px;
+  justify-content: start;
+  align-content: start;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.sidebar-row {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#first-sidebar-row {
+  font-size: 1.8rem;
+}
+
+.sidebar-icon {
+  color: white;
+  height: 25px;
+  justify-self: center;
+}
+
+#first-sidebar-icon {
+  height: 45px;
 }
 
 .nav {
   background-color: white;
   grid-column: 2/3;
   grid-row: 1/2;
+  box-shadow: 5px 0px 10px rgb(179, 179, 179);
+  z-index: 1;
 }
 
 .content {
-  background-color: lightgray;
+  background-color: rgb(236, 236, 236);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+}
+
+.content-left, .content-top-right, .content-bottom-right {
+  border: solid 1px black;
+}
+
+.content-left {
+  background-color: lightcoral;
+  grid-column: 1 / 2;
+  grid-row : 1/3;
+}
+
+.content-top-right, .content-bottom-right {
+  display: grid;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 40px;
+  gap: 20px;
+  justify-content: stretch;
+  align-content: start;
+}
+
+.content-top-right {
+  background-color: lightcyan;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.content-bottom-right {
+  background-color: lightgreen;
   grid-column: 2/3;
   grid-row: 2/3;
 }
 
+.title-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.right-card {
+  border: solid blue 1px;
+  background-color: white;
+  border-radius: 5px;
+}
