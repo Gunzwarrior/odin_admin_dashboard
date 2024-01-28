@@ -63,22 +63,18 @@ body {
   display: grid;
 }
 
-.content-left, .content-top-right, .content-bottom-right {
-  border: solid 1px black;
-}
-
 .content-left {
-  background-color: lightcoral;
+  background-color: rgb(231, 231, 231);
   grid-column: 1 / 2;
   grid-row : 1/3;
   padding-left: 20px;
-  padding-top: 50px;
+  padding-top: 30px;
   display: grid;
   align-content: start;
+  gap: 10px;
 }
 
 .card-grid {
-  padding-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -86,16 +82,36 @@ body {
 
 .round-icon {
   border-radius: 50%;
-  height: 60px;
+  height: 50px;
   width: auto;
 }
 
 .card {
-  background-color: white;
-  border: solid red 1px;
+  background-color: rgb(241, 206, 8);
   border-radius: 10px;
-  width: 400px;
+  width: 350px;
   height: 200px;
+  display: grid;
+  justify-items: end;
+  box-shadow: 5px 5px 10px rgb(179, 179, 179);
+}
+
+.subcard {
+  background-color: white;
+  width: 86%;
+  border-radius: 0px 10px 10px 0px;
+  padding: 30px 20px 20px;
+  display: grid;
+  align-content: start;
+  grid-template-rows: auto auto 1fr;
+}
+
+.card-icons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: end;
+  gap: 20px;
+  align-self: end;
 }
 
 .content-icon {
@@ -106,37 +122,78 @@ body {
 
 .content-top-right, .content-bottom-right {
   display: grid;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 40px;
   gap: 10px;
-  justify-content: stretch;
+  justify-content: start;
   align-content: start;
+  background-color: rgb(231, 231, 231);
 }
 
 .content-top-right {
-  background-color: lightcyan;
   grid-column: 2/3;
   grid-row: 1/2;
 }
 
 .content-bottom-right {
-  background-color: lightgreen;
   grid-column: 2/3;
   grid-row: 2/3;
 }
 
-.title-text {
+.title-text, .subtitle {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+.subtitle {
+  font-size: 0.9rem;
+}
+
 .right-card {
-  border: solid blue 1px;
   background-color: white;
   border-radius: 10px;
   display: grid;
-  width: 300px;
+  width: 235px;
+  padding: 30px 20px 20px;
+  gap: 15px;
+  box-shadow: 5px 5px 10px rgb(179, 179, 179);
+  z-index: 1;
+  
+}
+
+.sub-announcement {
+  border-bottom: solid 1px rgb(150, 149, 149);
+  padding: 0px 5px 15px;
+}
+
+.trending {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+#last-row {
+  border-bottom: none;
+}
+
+.handle, .category {
+  font-size: 0.9rem;
+}
+
+.announcement-text {
+  font-size: 0.8rem;
+}
+
+.category, .announcement-text, .card-text {
+  color: rgb(121, 121, 121);
+}
+
+.handle {
+  font-size: bold;
 }
 
 img {
